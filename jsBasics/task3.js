@@ -1,4 +1,4 @@
-let age = 25;
+const age = 25;
 const adultAge = age >= 18;
 
 console.log("Age:", age);
