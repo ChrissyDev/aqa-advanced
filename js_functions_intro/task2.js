@@ -1,4 +1,4 @@
-const adultCheck = age => age >= 18;
+const isAdult = age => age >= 18;
 
-console.log(adultCheck(25));
-console.log(adultCheck(15));
+console.log(isAdult(25));
+console.log(isAdult(15));
