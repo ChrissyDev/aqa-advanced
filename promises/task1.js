@@ -1,7 +1,7 @@
-function delayedOutput(text, milliseconds) {
+function delayedConsoleLog(text, milliseconds) {
     setTimeout(() => {
       console.log(text);
     }, milliseconds);
   }
   
-  delayedOutput("Цей текст з'явиться через 2 секунди", 2000);
+  delayedConsoleLog("Цей текст з'явиться через 2 секунди", 2000);
