@@ -10,6 +10,9 @@ export default class Book {
     }
 
     set title(newTitle) {
+        if (typeof newTitle !== 'string' || newTitle.trim() === '') {
+            throw new Error('Invalid input. Title must be a non-empty string.');
+        }
         this._title = newTitle;
     }
 
@@ -18,6 +21,9 @@ export default class Book {
     }
 
     set author(newAuthor) {
+        if (typeof newAuthor !== 'string' || newAuthor.trim() === '') {
+            throw new Error('Invalid input. Author must be a non-empty string.');
+        }
         this._author = newAuthor;
     }
 
@@ -26,11 +32,11 @@ export default class Book {
     }
 
     set releaseYear(newYear) {
-        if (typeof newYear === 'number') {
-            this._releaseYear = newYear;
-        } else {
+        if (typeof newYear !== 'number') {
             console.error('Invalid input. Year must be a number.');
+            return;
         }
+        this._releaseYear = newYear;
     }
 
     printInfo() {

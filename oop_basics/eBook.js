@@ -11,6 +11,9 @@ export default class EBook extends Book {
     }
 
     set fileFormat(newFormat) {
+        if (typeof newFormat !== 'string' || newFormat.trim() === '') {
+            throw new Error('Invalid input. File format must be a non-empty string.');
+        }
         this._fileFormat = newFormat;
     }
 
